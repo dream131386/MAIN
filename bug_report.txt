@@ -1,0 +1,13 @@
+ID-01
+Project-002AB
+title-what? where? when?
+Description-подробное описание, ожидаемый результат, фактический резульатат,требование
+steps-шаги воспроизведения
+reproducibility-always
+Priority -high
+severity-critical
+workaround-no
+environment-какая ОС , разрядность, браузер, верия браузера
+tester-name
+attachments-pics
+comments-no
