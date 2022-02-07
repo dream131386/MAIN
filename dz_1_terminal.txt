@@ -1,0 +1,164 @@
+1) Посмотреть где я
+pwd
+/c/Users/Maryna/Desktop
+
+2) Создать папку
+mkdir maryna_mazanko_25
+
+
+3) Зайти в папку
+cd maryna_mazanko_25
+
+
+4) Создать 3 папки
+mkdir folder_maryna_1 foldermaryna_2 foldermaryna_3
+
+5) Зайти в любоую папку
+cd folder_maryna_1
+
+
+6) Создать 5 файлов (3 txt, 2 json)
+touch file1.txt file2.txt file3.txt file4.json file5.json
+
+
+7) Создать 3 папки
+mkdir maryna1 maryna2 maryna3
+
+
+8. Вывести список содержимого папки
+ls -la
+ 
+
+9) + Открыть любой txt файл
+ vim file1.txt
+
+
+10) + написать туда что-нибудь, любой текст.
+
+ i {this is crazy}
+ 
+
+11) + сохранить и выйти. esc :wq
+
+12) Выйти из папки на уровень выше
+
+
+cd_..
+
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+
+mv file1.txt file2.txt /d/maryna_mazanko_25/folder_maryna_2 ( два файла )
+mv folder_maryna_4/file1.txt folder_maryna_4/file2.txt folder_maryna_4/777 (2 файла , не стоя в папке в которой перемещаем )
+ mv folder_maryna_4/*.json folder_maryna_4/777  ( звездочка заменяет любое количество символов  срасширением json те. все файлы с расширеним json )
+ mv folder_maryna_4/777/file*.* folder_maryna_4 ( первая звездочка заменила все файлы с любым расширением , вторая_заменила все расширения )
+ 
+
+
+
+mv folder_maryna_1/file5.json folder_maryna_2/file5.json  ( один файл )
+
+
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+
+cp folder_maryna_1/file4.json folder_maryna_2/file4.json  (скопировали один файл. )
+cp folder_maryna_4/file*.* folder_maryna_3 ( скопировали все файлы )
+cp folder_maryna_2/file1.txt folder_maryna_2/file2.txt test (скопировала два файла )
+
+
+
+15) Найти файл по имени
+ find /d/maryna_mazanko_25 -name file1.txt
+/d/maryna_mazanko_25/folder_maryna_2/file1.txt
+/d/maryna_mazanko_25/folder_maryna_3/file1.txt
+/d/maryna_mazanko_25/folder_maryna_4/file1.txt
+
+ find /d/maryna_mazanko_25 -name *.txt
+/d/maryna_mazanko_25/folder_maryna_1/file3.txt
+/d/maryna_mazanko_25/folder_maryna_2/file1.txt
+/d/maryna_mazanko_25/folder_maryna_2/file2.txt
+/d/maryna_mazanko_25/folder_maryna_3/file1.txt
+/d/maryna_mazanko_25/folder_maryna_3/file2.txt
+/d/maryna_mazanko_25/folder_maryna_4/file1.txt
+/d/maryna_mazanko_25/folder_maryna_4/file2.txt ( вывели все файлы с расширением txt )
+
+find /d/maryna_mazanko_25 -name *.*
+/d/maryna_mazanko_25/folder_maryna_1/file3.txt
+/d/maryna_mazanko_25/folder_maryna_1/file4.json
+/d/maryna_mazanko_25/folder_maryna_2/file1.txt
+/d/maryna_mazanko_25/folder_maryna_2/file2.txt
+/d/maryna_mazanko_25/folder_maryna_2/file4.json
+/d/maryna_mazanko_25/folder_maryna_2/file5.json
+/d/maryna_mazanko_25/folder_maryna_3/file.json
+/d/maryna_mazanko_25/folder_maryna_3/file1.txt
+/d/maryna_mazanko_25/folder_maryna_3/file2.txt
+/d/maryna_mazanko_25/folder_maryna_3/file4.json
+/d/maryna_mazanko_25/folder_maryna_4/file.json
+/d/maryna_mazanko_25/folder_maryna_4/file1.txt
+/d/maryna_mazanko_25/folder_maryna_4/file2.txt
+/d/maryna_mazanko_25/folder_maryna_4/file4.json ( вывели вообще все файлы )
+
+
+
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+cat folder_maryna_2/file2.txt (посмотреть содержимое файла )
+
+cat folder_maryna_2/file2.txt | grep 123 ( с помощью grep отфильтровала все строки где есть 123)
+
+
+
+
+17) вывести несколько первых строк из текстового файла
+
+ head -n 5 folder_maryna_2/file2.txt
+ 
+ head -n -5 folder_maryna_2/file2.txt ( после пятой строки снизу оборвал текст. ) 
+ 
+ 
+
+
+
+
+
+18) вывести несколько последних строк из текстового файла
+ tail -n 5 folder_maryna_2/file2.txt
+
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less folder_maryna_2/file2.txt (выводит содержимое фала постраничено, нельзя редактировать.клавишей H выводим help и читаем кнопки(подсказки )
+ для навигации. выйти кнопка q
+ 
+
+20) вывести дату и время
+date
+
+
+ 21)
+ запустить скрипт :  
+ 
+ chmod +x script.txt (делается для новых файлов скриптовю делаем 1 раз эту команду)
+ 
+  ./script.txt
+  
+  
+  
+  cd test
+mkdir papka1 papka2 papka3
+cd papka3
+touch file1.txt file2.txt file3.json file4.json file5.txt
+mkdir 1 2 3
+ls -la 
+mv *.json /d/maryna_mazanko_25/test
+date
+
+
+
+  
+  22)
+  отправить запрос на сервер
+   curl "http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000"
+  
+  (взять ссылку в кавычки)
+

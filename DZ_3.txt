@@ -1,0 +1,107 @@
+
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+
+создаем внешний репозиторий MAIN (  для удобства работы в нем . он  является (main) чтобы в нем создавать ветки )
+
+mkdir main_repository
+git clone https://github.com/dream131386/MAIN.git
+
+дальше создаем локально ветки:
+
+git branch Postman
+git branch Jmeter
+git branch CheckLists
+git branch BugReports
+git branch SQL
+git branch Charles
+git branch Mobile_testing
+
+
+2. Запушить все ветки на внешний репозиторий
+
+
+git push -u origin Postman Jmeter CheckLists BugReports SQL Charles Mobile_testing
+
+git push origin --all -u ( попробовать в будущем эту комманду чтоб не перечислять все ветки через пробел )
+
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+
+git checkout BugReports ( заходим в ветку багрепорты)
+touch bug_report.txt ( создаем в ней текстовый файл багрепорт )
+
+vim bug_report.txt
+
+insert 
+
+ ID-01
+Project-002AB
+title-what? where? when?
+Description-подробное описание, ожидаемый результат, фактический резульатат,требование
+steps-шаги воспроизведения
+reproducibility-always
+Priority -high
+severity-critical
+workaround-no
+environment-какая ОС , разрядность, браузер, верия браузера
+tester-name
+attachments-pics
+comments-no
+
+esc :wq
+
+4. Запушить структуру багрепорта на внешний репозиторий
+
+git add bug_report.txt
+git commit -m "add bug_report.txt"
+git push
+
+
+5. Вмержить ветку Bag Reports в Main
+
+git checkout MAIN ( зайти в ветку, куда будем мержить)
+ git merge BugReports ( вмержить ветку BugReports )
+
+
+6. Запушить main на внешний репозиторий.
+
+( смотреть пункт 1 => внешний репозиторий MAIN у нас уже и так уже склонирован на локальный изначально ) 
+
+7. В ветке CheckLists набросать структуру чек листа.
+
+git checkout CheckLists ( зайти в ветку CheckLists)
+touch CheckList.txt ( создаем файл CheckList.txt)
+
+vim CheckList.txt
+insert
+
+esc 
+:wq
+
+
+8. Запушить структуру на внешний репозиторий
+git add .
+git commit -m "add CheckList.txt"
+git push
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
+git checkout MAIN ( зайти в ветку, куда будем мержить)
+вмержить ветку CheckList
+
+
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+
+проверяем локальный репозиторий 
+git fetch
+git pull
+
+

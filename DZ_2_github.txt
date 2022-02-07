@@ -1,0 +1,277 @@
+Как отправить ДЗ на проверку.
+ 1. Создайте текстоовый файл как в первом ДЗ по Terminal.
+ 2. Сценарий перенесите в этот файл.
+ 3. На против каждого действия - напишите команду в GitBash
+
+Файл со сценарием и ссылку на свой гит хаб отправляйте менторам на проверку.
+
+JSON
+ 4. Создать внешний репозиторий c названием JSON.
+  нажимаем + в правом верхнем углу
+  
+ 5. Клонировать репозиторий JSON на локальный компьютер.
+  mkdir DZ_2 ( создаем папку на компьютере , куда мы скопируем внешний репозиторий )
+  cd DZ_2 ( заходим в эту папку) 
+
+клонируем внешний репозиторий в нашу папку на компьютере
+ 
+ git clone https://github.com/dream131386/JSON2.git
+
+ 
+ 
+ проверим версию гита
+  git --version
+git version 2.34.1.windows.1
+  
+
+
+ 6. Внутри локального JSON2 создать файл “new2.json”.
+ touch new2.json
+
+ 7. Добавить файл под гит.
+ git config --global user.name "maryna_mazanko" ( указываем кто вносит изменения в репозиторий )
+ git config --global user.email "mariepalko@gmail.com" ( указываем мою почту )
+ 
+
+ git init ( делаем эту команду которая добавляет каки-то начальных настроек нашему репозиторию. делаем ее перед начало добавления файлов)
+ 
+ git add new2.json ( добавляем файл в репозиторий на нашем компьютере)
+  
+ 8. Закоммитить файл.
+ git commit -m "add empty file"
+
+ 9. Отправить файл на внешний GitHub репозиторий.
+ 
+ git push  
+
+ 
+
+ 10. Отредактировать содержание файла “new2.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+ vim new2.json
+
+{
+	"ФИО": "mazanko maryna viktorovna",
+	"возраст": 35,
+	"домашние животные": "нет",
+	"будущая зарплата": "10000$"
+}
+esc :wq
+
+ 
+ 
+ 11. Отправить изменения на внешний репозиторий.
+ git add new2.json
+ git commit -m "add new one line"
+ git push
+
+ 
+ 12. Создать файл preferences.json
+ touch preferences.json
+
+ 
+ 13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
+  vim new2.json
+  {
+	"любимый фильм": "любимый фильм",
+	"любимый сериал": "любимый сериал",
+	"любимая еда": "стейк",
+	"страна которую хотел бы посетить": "фиджи"
+}
+  
+  esc :wq
+  
+  
+ 14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
+ touch skils.json
+  vim skils.json
+esc :wq
+
+
+ 15. Отправить сразу 2 файла на внешний репозиторий.
+ git add .
+ git commit -m "add preferences.json and skils.json"
+git push
+
+ 16. На веб интерфейсе создать файл bug_report.json.
+ 
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+ 19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 
+ 20. Синхронизировать внешний и локальный репозиторий JSON
+ 
+ git fetch ( проверить есть ли какие-то изменения )
+
+git pull ( Синхронизировать внешний и локальный репозиторий JSON )
+
+
+
+
+
+XML
+ 21. Создать внешний репозиторий c названием XML.
+ 22. Клонировать репозиторий XML на локальный компьютер.
+
+ 
+ git clone https://github.com/dream131386/XML.git ( копируем внешний репозиторий на локалльный компьютер)
+
+
+ 
+ 23. Внутри локального XML создать файл “new.xml”.
+ 
+ touch new.xml
+
+ 24. Добавить файл под гит.
+ 
+ git config --global user.name "maryna_mazanko" ( указываем кто вносит изменения в репозиторий )
+ git config --global user.email "mariepalko@gmail.com" ( указываем мою почту )
+ git init ( делаем эту команду которая добавляет каки-то начальных настроек нашему репозиторию. делаем ее перед начало добавления файлов)
+ git add new.xml
+
+ 
+ 25. Закоммитить файл.
+ git commit -m "add empty file new.xml"
+
+ 26. Отправить файл на внешний GitHub репозиторий.
+ git push
+
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+ vim new.xml
+<xml>
+	<name>Mazanko-Maryna</name>
+	<age>35</age>
+	<pets>no</pets>
+	<future_salary>10000$</future_salary>
+
+
+ 28. Отправить изменения на внешний репозиторий.
+ 
+ git add new.xml
+ git commit -m "add 4 lines personal info "
+git push
+
+ 29. Создать файл preferences.xml
+ touch preferences.xml
+ 
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+ vim new.xml
+ 
+ 
+<xml>
+        <favourite movie>none</favourite movie>
+        <favourite series>none</favourite series>
+        <favourite food>meat,salmon,vegetables,beriies</favourite food>
+        <the country i want to visit>Bukovel in winter,Ukraine</the country i want to visit>
+
+esc :wq
+
+
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+ 
+  touch skills.xml
+  
+  vim skills.xml
+  <xml>
+        <info passed>git terminal,github</info passed>
+        <theory passed>what testing is, types and levels of testing, defect and error, bug report and test case, goals and principles of testing</theory passed>
+        <future info>will see,will do</future info>
+        <future theory>will see,will learn</future theory>
+
+esc :wq
+
+ 32. Сделать коммит в одну строку.
+ 
+ git add .
+ git commit -m "add 2 files preferences.xml and skills.xml"
+
+ 33. Отправить сразу 2 файла на внешний репозиторий.
+ git push
+
+
+ 34. На веб интерфейсе создать файл bug_report.xml.
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 38. Синхронизировать внешний и локальный репозиторий XML
+ git pull
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ TXT
+ 1. Создать внешний репозиторий c названием TXT.
+ 2. Клонировать репозиторий TXT на локальный компьютер.
+ 
+ git clone https://github.com/dream131386/TXT.git
+
+ 3. Внутри локального TXT создать файл “new.txt”.
+  cd txt ( заходим в папку txt )
+  touch new.txt
+
+
+ 4. Добавить файл под гит.
+ git add new.txt
+
+ 5. Закоммитить файл.
+ git commit -m "add new empty file new.txt"
+
+ 6. Отправить файл на внешний GitHub репозиторий.
+ git push
+ 
+ 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
+ vim new.txt
+
+ фио-  мазанько мраина викторовна, 
+ возраст - 35,
+ количество домашних животных-нет,
+ будущая желаемая зарплата-10000$
+
+
+
+ 8. Отправить изменения на внешний репозиторий.
+ git commit -am "add personal info to file new.txt"
+ git push
+
+ 
+ 9. Создать файл preferences.txt
+ touch preferences.txt
+
+ 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
+ 
+ vim preferences.txt
+ 
+  любимый фильм-нет,
+ любимый среиал-нет,
+ любимая еда- мясо, рыба, овощи, ягоды
+ странакоторую хотел бы посетить- Буковель зимой, Украина
+
+
+esc :wq
+
+ 11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+ touch skils.txt
+ vim skils.txt
+ 
+  скилы которые будут изучены на курсе- когда изучу, тогда и отпишусь :)
+
+
+esc :wq
+
+
+ 12. Сделать коммит в одну строку.
+  git add .
+git commit -m "add files preferences.txt and skils.txt"
+
+ 13. Отправить сразу 2 файла на внешний репозиторий.
+ git push
+ 
+ 14. На веб интерфейсе создать файл bug_report.txt.
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 18. Синхронизировать внешний и локальный репозиторий TXT
+ git pull
+ 
